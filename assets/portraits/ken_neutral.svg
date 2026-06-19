@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 780" width="520" height="780">
+  <!-- gakuran shoulders -->
+  <path d="M140 780 Q150 630 260 612 Q370 630 380 780 Z" fill="#1f232b"/>
+  <path d="M210 624 L260 660 L310 624 L308 648 L260 678 L212 648 Z" fill="#2c313c"/>
+  <rect x="252" y="640" width="16" height="60" fill="#3a4150"/>
+  <!-- neck -->
+  <rect x="238" y="556" width="46" height="74" rx="18" fill="#eab48a"/>
+  <!-- head -->
+  <ellipse cx="260" cy="428" rx="128" ry="146" fill="#f6c79b"/>
+  <circle cx="136" cy="438" r="18" fill="#eab98f"/>
+  <circle cx="384" cy="438" r="18" fill="#eab98f"/>
+  <!-- short hair -->
+  <path d="M132 410 Q120 250 260 244 Q400 250 388 410 Q380 320 330 300 Q300 326 260 322 Q220 326 190 300 Q140 320 132 410 Z" fill="#2b2d36"/>
+  <!-- thick brows -->
+  <rect x="188" y="404" width="54" height="10" rx="5" fill="#23252e"/>
+  <rect x="278" y="404" width="54" height="10" rx="5" fill="#23252e"/>
+  <!-- eyes -->
+  <ellipse cx="214" cy="448" rx="24" ry="26" fill="#ffffff"/>
+  <ellipse cx="306" cy="448" rx="24" ry="26" fill="#ffffff"/>
+  <circle cx="214" cy="450" r="14" fill="#4a5a40"/>
+  <circle cx="306" cy="450" r="14" fill="#4a5a40"/>
+  <circle cx="214" cy="450" r="6" fill="#222222"/>
+  <circle cx="306" cy="450" r="6" fill="#222222"/>
+  <circle cx="219" cy="445" r="3.5" fill="#ffffff"/>
+  <circle cx="311" cy="445" r="3.5" fill="#ffffff"/>
+  <path d="M258 470 q6 8 -2 14" stroke="#d59a6c" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M236 506 L284 506" stroke="#9c5a48" stroke-width="5" fill="none" stroke-linecap="round"/>
+</svg>

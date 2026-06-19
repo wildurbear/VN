@@ -1,0 +1,188 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8vn0templatemain"]
+
+[ext_resource type="Script" path="res://scripts/VisualNovel.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/TypewriterLabel.gd" id="2"]
+
+[node name="VisualNovel" type="Control"]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Characters" type="Control" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Left" type="TextureRect" parent="Characters"]
+layout_mode = 1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = -680.0
+offset_right = 520.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Center" type="TextureRect" parent="Characters"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -700.0
+offset_right = 240.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Right" type="TextureRect" parent="Characters"]
+layout_mode = 1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -520.0
+offset_top = -680.0
+offset_right = -40.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Fade" type="ColorRect" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="DialoguePanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -208.0
+offset_right = -32.0
+offset_bottom = -28.0
+mouse_filter = 2
+
+[node name="VBox" type="VBoxContainer" parent="DialoguePanel"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NameLabel" type="Label" parent="DialoguePanel/VBox"]
+layout_mode = 2
+mouse_filter = 2
+text = "Name"
+
+[node name="DialogueText" type="RichTextLabel" parent="DialoguePanel/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+bbcode_enabled = true
+scroll_active = false
+script = ExtResource("2")
+
+[node name="ContinueArrow" type="Label" parent="."]
+layout_mode = 1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -72.0
+offset_top = -64.0
+offset_right = -32.0
+offset_bottom = -24.0
+mouse_filter = 2
+text = "▼"
+
+[node name="Choices" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -170.0
+offset_right = 280.0
+offset_bottom = 170.0
+alignment = 1
+
+[node name="TopBar" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_left = -640.0
+offset_top = 14.0
+offset_right = -16.0
+offset_bottom = 54.0
+theme_override_constants/separation = 8
+alignment = 2
+
+[node name="Auto" type="Button" parent="TopBar"]
+layout_mode = 2
+text = "Auto"
+
+[node name="Skip" type="Button" parent="TopBar"]
+layout_mode = 2
+text = "Skip"
+
+[node name="Log" type="Button" parent="TopBar"]
+layout_mode = 2
+text = "Log"
+
+[node name="Save" type="Button" parent="TopBar"]
+layout_mode = 2
+text = "Save"
+
+[node name="Load" type="Button" parent="TopBar"]
+layout_mode = 2
+text = "Load"
+
+[node name="HistoryPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchor_left = 0.08
+anchor_top = 0.1
+anchor_right = 0.92
+anchor_bottom = 0.9
+
+[node name="VBox" type="VBoxContainer" parent="HistoryPanel"]
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="HistoryPanel/VBox"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="HistoryPanel/VBox/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Backlog"
+
+[node name="Close" type="Button" parent="HistoryPanel/VBox/Header"]
+layout_mode = 2
+text = "Close"
+
+[node name="Scroll" type="ScrollContainer" parent="HistoryPanel/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HistoryText" type="RichTextLabel" parent="HistoryPanel/VBox/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+fit_content = true

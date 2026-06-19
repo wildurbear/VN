@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d7ecf7"/>
+      <stop offset="1" stop-color="#f3f8fb"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#wall)"/>
+  <rect y="470" width="1280" height="250" fill="#cbaa86"/>
+  <rect y="470" width="1280" height="14" fill="#a8855f"/>
+  <!-- chalkboard -->
+  <rect x="170" y="120" width="650" height="280" rx="10" fill="#34503f"/>
+  <rect x="170" y="120" width="650" height="280" rx="10" fill="none" stroke="#caa06a" stroke-width="16"/>
+  <path d="M210 200 H520 M210 250 H600 M210 300 H470" stroke="#bfcabf" stroke-width="4" opacity="0.55" fill="none"/>
+  <!-- window -->
+  <rect x="900" y="120" width="300" height="300" rx="8" fill="#bfe3f2" stroke="#e8eef2" stroke-width="14"/>
+  <line x1="1050" y1="120" x2="1050" y2="420" stroke="#e8eef2" stroke-width="10"/>
+  <line x1="900" y1="270" x2="1200" y2="270" stroke="#e8eef2" stroke-width="10"/>
+  <!-- a desk silhouette -->
+  <rect x="120" y="520" width="220" height="20" rx="6" fill="#b07a4a"/>
+  <rect x="140" y="540" width="16" height="120" fill="#9c6a3e"/>
+  <rect x="304" y="540" width="16" height="120" fill="#9c6a3e"/>
+</svg>

@@ -1,0 +1,65 @@
+{
+  "title": "A Quiet Afternoon",
+  "start": "intro",
+  "variables": { "affection": 0 },
+
+  "nodes": {
+    "intro": [
+      { "bg": "classroom" },
+      { "say": "", "text": "Sunlight pools across the desks of the empty classroom." },
+      { "show": "Alice", "at": "left", "mood": "neutral" },
+      { "say": "Alice", "text": "Oh— you're still here? I thought I was the last one left." },
+      { "say": "Alice", "text": "...Were you waiting for someone?", "mood": "neutral" },
+      { "choice": [
+        { "text": "\"Maybe I was waiting for you.\"", "goto": "warm", "add": { "affection": 2 } },
+        { "text": "\"Just lost track of time.\"", "goto": "cool" }
+      ] }
+    ],
+
+    "warm": [
+      { "say": "Alice", "text": "W-what? You can't just say things like that out of nowhere!", "mood": "happy" },
+      { "say": "Alice", "text": "...But I don't mind. Not really.", "mood": "happy" },
+      { "goto": "meet_ken" }
+    ],
+
+    "cool": [
+      { "say": "Alice", "text": "Oh. Right. Of course.", "mood": "sad" },
+      { "say": "", "text": "Something flickers across her face before she tucks it behind a smile." },
+      { "goto": "meet_ken" }
+    ],
+
+    "meet_ken": [
+      { "bg": "sunset" },
+      { "say": "", "text": "The door clatters open. Ken leans in, bag slung over one shoulder." },
+      { "show": "Ken", "at": "right", "mood": "neutral" },
+      { "say": "Ken", "text": "There you two are. The front gate locks in ten minutes, you know." },
+      { "say": "Alice", "text": "We were just... talking.", "mood": "neutral" },
+      { "say": "Ken", "text": "Uh-huh. Walk home together, then?" },
+      { "choice": [
+        { "text": "\"Yeah, let's all go.\"", "goto": "finale", "add": { "affection": 1 } },
+        { "text": "\"You two go on ahead.\"", "goto": "finale" }
+      ] }
+    ],
+
+    "finale": [
+      { "goto": "good_end", "if": "affection >= 2" },
+      { "goto": "normal_end" }
+    ],
+
+    "good_end": [
+      { "bg": "night" },
+      { "hide": "Ken" },
+      { "say": "Alice", "text": "Hey... thanks for today. I mean it.", "mood": "happy" },
+      { "say": "", "text": "Under the first stars, she smiles like she means to remember this one." },
+      { "say": "", "text": "(Affection: {affection} — a good beginning.)" },
+      { "end": true }
+    ],
+
+    "normal_end": [
+      { "bg": "night" },
+      { "say": "", "text": "You part ways at the corner, the evening cooling around you." },
+      { "say": "", "text": "(Affection: {affection} — perhaps another day.)" },
+      { "end": true }
+    ]
+  }
+}
